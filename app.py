@@ -28,7 +28,7 @@ HASH_PASSWORDS = True  # Set to False to disable password hashing
 
 # Server Configuration
 HOST = "0.0.0.0"
-PORT = 8080
+PORT = 8440
 DEBUG = False
 
 # File Upload Configuration
