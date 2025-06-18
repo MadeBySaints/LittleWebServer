@@ -13,12 +13,12 @@ from datetime import datetime
 from functools import wraps
 from werkzeug.utils import secure_filename
 from flask import Flask, render_template_string, request, redirect, url_for, session, flash, send_file, abort, make_response, jsonify
-from waitress import serve
+from waitress import serve # type: ignore
 
 active_sessions = {}
 
 # ============================================================================
-# CONFIGURATION - Easy to modify
+# CONFIGURATION
 # ============================================================================
 
 # Security Configuration
@@ -32,20 +32,20 @@ PORT = 8080
 DEBUG = False
 
 # File Upload Configuration
-MAX_FILE_SIZE = 16 * 1024 * 1024  # 16MB
-ALLOWED_EXTENSIONS = {'txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif', 'doc', 'docx', 'zip', 'csv'}
+MAX_FILE_SIZE = 1024 * 1024 * 1024  # 1GB
+ALLOWED_EXTENSIONS = {'txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif', 'doc', 'docx', 'zip', 'csv', 'stl', '3mf'}
 
 # Website Content - Easy to customize
 SITE_CONFIG = {
     'site_name': 'SecureFileHub',
     'tagline': 'Your Personal File Storage Solution',
-    'company_name': 'TechSolutions Inc.',
+    'company_name': 'Dot.Pixel(Studio)',
     'primary_color': '#2563eb',
     'secondary_color': '#1e40af',
     'background_gradient': 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
     'about_content': {
         'title': 'About SecureFileHub',
-        'description': 'We provide secure, reliable file storage solutions for individuals and teams.',
+        'description': 'Reliable file storage solutions for individuals and teams.',
         'features': [
             'Secure user authentication',
             'Personal file storage',
@@ -53,7 +53,7 @@ SITE_CONFIG = {
             'User-friendly interface',
             'Production-grade security'
         ],
-        'team_info': 'Our team consists of experienced developers dedicated to providing the best file storage experience.'
+        'team_info': 'Just a guy with a keyboard.'
     }
 }
 
