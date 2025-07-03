@@ -32,8 +32,8 @@ PORT = 8440
 DEBUG = False
 
 # File Upload Configuration
-MAX_FILE_SIZE = 1024 * 1024 * 1024  # 1GB
-ALLOWED_EXTENSIONS = {'txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif', 'doc', 'docx', 'zip', 'csv', 'stl', '3mf'}
+MAX_FILE_SIZE = 4096 * 1024 * 1024  # 1GB
+ALLOWED_EXTENSIONS = {'txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif', 'doc', 'docx', 'zip', 'csv', 'stl', '3mf', '*'}
 
 # Website Content - Easy to customize
 SITE_CONFIG = {
